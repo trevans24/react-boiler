@@ -1,0 +1,25 @@
+{
+  "name": "react-boiler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trevans24/react-boiler.git"
+  },
+  "keywords": [
+    "React",
+    "React Boiler Plate",
+    "Starter Files",
+    "Project Setup"
+  ],
+  "author": "Troy Evans",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trevans24/react-boiler/issues"
+  },
+  "homepage": "https://github.com/trevans24/react-boiler#readme"
+}
