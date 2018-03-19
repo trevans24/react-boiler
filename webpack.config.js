@@ -15,22 +15,20 @@ module.exports = {
 
   // loaders or compilers
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$|\.jsx$/,
-        exclude: /(node_modules)/,
-        use: [
-          {
-            loader: 'babel-loader',
-            query: {
-              presets: ['es2015', 'react'],
-            },
-          },
-        ],
-      }, {
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-      }, {
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015', 'react'],
+        }
+      },
+      {
+        test: /\.(s*)css$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
         test: /\.jpeg$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$|\.jpg$/,
         loader: 'file-loader',
         query: {
