@@ -18,7 +18,9 @@ module.exports = {
     rules: [
       {
         test: /\.js$|\.jsx$/,
-        exclude: /node_modules/,
+        exclude: [
+          path.resolve(__dirname, 'node_modules')
+        ],
         loader: 'babel-loader',
         query: {
           presets: ['es2015', 'react'],
@@ -40,5 +42,8 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
   },
+  performance: {
+   hints: process.env.NODE_ENV === 'production' ? "warning" : false
+},
   plugins: [new HtmlWebpackPlugin({ template: './src/index.html', filename: 'index.html' })],
 };
